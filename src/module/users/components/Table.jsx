@@ -3,13 +3,16 @@ import { useState } from 'react';
 import { useTable } from '../hooks/useTable.js';
 import { DataTableCard2, DateTime } from "asab_webui_components";
 import { useTranslation } from 'react-i18next';
+import { Link } from "react-router";
 
 const UsernameCell = ({ row }) => {
     const [hovered, setHovered] = useState(false);
 
     return (
         <span onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)}>
-            {row.username}
+            <Link to={`/detail/${row.id}`}>
+				{row.username}
+			</Link>
             {hovered && <><br /><span className="small">{row.id}</span></>}
         </span>
     );

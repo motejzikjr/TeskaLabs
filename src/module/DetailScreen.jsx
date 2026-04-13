@@ -1,12 +1,11 @@
 import React from 'react';
 import { Container } from 'reactstrap';
-import { Table } from "./users/components/Table";
+import { Detail } from "./users/components/Detail";
 
-export function TableScreen(props) {
-
+export function DetailScreen(props) {
 	return (
 		<Container>
-            <Table />
+            <Detail />
 		</Container>
 	);
 }
