@@ -39,23 +39,23 @@ export const Table = () => {
 
     const columns = [
         {
-            title: t("Users|Username"),
+            title: <><i className="bi bi-person"></i> {t("Users|Username")}</>,
             render: ({ row }) => <UsernameCell row={row} />
         },
         {
-            title: t("Users|E-mail"),
+            title: <><i className="bi bi-mailbox"></i> {t("Users|E-mail")}</>,
             render: ({ row }) => row.email
         },
         {
-            title: t("Users|Address"),
+            title: <><i className="bi bi-house"></i> {t("Users|Address")}</>,
             render: ({ row }) => row.address
         },
         {
-            title: t("Users|Created at"),
+            title: <><i className="bi bi-check"></i> {t("Users|Created at")}</>,
             render: ({ row }) => <DateTime value={row.created}/>
         },
         {
-            title: t("Users|Last sign in"),
+            title: <><i className="bi bi-calendar-check"></i> {t("Users|Last sign in")}</>,
             render: ({ row }) => <DateTime value={row.last_sign_in}/>
         },
     ];

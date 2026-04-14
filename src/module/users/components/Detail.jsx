@@ -16,12 +16,36 @@ export const Detail = () => {
     return (
         <ResultCard status='success'>
             <h1>{user.username}</h1>
-            <p><strong>{t("Users|E-mail")}:</strong> {user.email}</p>
-            <p><strong>{t("Users|Address")}:</strong> {user.address}</p>
-            <p><strong>{t("Users|Created at")}:</strong> <DateTime value={user.created}/></p>
-            <p><strong>{t("Users|Id")}:</strong> {user.id}</p>
-            <p><strong>{t("Users|IP address")}:</strong> {user.ip_address}</p>
-            <p><strong>{t("Users|Phone number")}:</strong> {user.phone_number}</p>
+            <p>
+                <i className="bi bi-mailbox"></i>
+                &nbsp;
+                <strong>{t("Users|E-mail")}:</strong> {user.email}
+            </p>
+            <p>
+                <i className="bi bi-house"></i>
+                &nbsp;
+                <strong>{t("Users|Address")}:</strong> {user.address}
+            </p>
+            <p>
+                <i className="bi bi-check"></i>
+                &nbsp;
+                <strong>{t("Users|Created at")}:</strong> <DateTime value={user.created}/>
+            </p>
+            <p>
+                <i className="bi bi-person"></i>
+                &nbsp;
+                <strong>{t("Users|Id")}:</strong> {user.id}
+            </p>
+            <p>
+            <i className="bi bi-ethernet"></i>
+                &nbsp;
+                <strong>{t("Users|IP address")}:</strong> {user.ip_address}
+            </p>
+            <p>
+            <i className="bi bi-telephone"></i>
+                &nbsp;
+                <strong>{t("Users|Phone number")}:</strong> {user.phone_number}
+            </p>
         </ResultCard>
     );
 }
