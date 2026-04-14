@@ -2,6 +2,7 @@ import { Module } from "asab_webui_components";
 
 import { TableScreen } from './TableScreen.jsx';
 import { DetailScreen } from './DetailScreen.jsx';
+import { WeatherScreen } from "./WeatherScreen";
 
 export default class TableApplicationModule extends Module {
 	constructor(app, name) {
@@ -21,10 +22,23 @@ export default class TableApplicationModule extends Module {
 			component: TableScreen,
 		});
 
+		app.Router.addRoute({
+			path: "/weather",
+			end: false,
+			name: 'Weather',
+			component: WeatherScreen,
+		});
+
 		app.Navigation.addItem({
 			name: "Table",
 			icon: 'bi bi-table',
 			url: "/",
+		});
+
+		app.Navigation.addItem({
+			name: "Weather",
+			icon: 'bi bi-table',
+			url: "/weather",
 		});
 	}
 }
