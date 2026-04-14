@@ -31,7 +31,7 @@ export const Table = () => {
             <div className="flex-fill">
                 <h3>
                     <i className="bi bi-stopwatch pe-2"></i>
-                    {t("SessionListContainer|Sessions")}
+                    {t("Users|Users")}
                 </h3>
             </div>
         </>);
@@ -39,23 +39,23 @@ export const Table = () => {
 
     const columns = [
         {
-            title: "Username",
+            title: t("Users|Username"),
             render: ({ row }) => <UsernameCell row={row} />
         },
         {
-            title: "E-mail",
+            title: t("Users|E-mail"),
             render: ({ row }) => row.email
         },
         {
-            title: "Address",
+            title: t("Users|Address"),
             render: ({ row }) => row.address
         },
         {
-            title: "Created at",
+            title: t("Users|Created at"),
             render: ({ row }) => <DateTime value={row.created}/>
         },
         {
-            title: "Last sign in",
+            title: t("Users|Last sign in"),
             render: ({ row }) => <DateTime value={row.last_sign_in}/>
         },
     ];
