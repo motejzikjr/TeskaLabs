@@ -15,12 +15,12 @@ module.exports = {
 		rules: [
 			// Tell webpack what to import to project
 			{
-				test: /\.m?jsx?$/, // .js and .jsx files processed by babel
+				test: /\.m?[jt]sx?$/, // .js, .jsx, .ts and .tsx files processed by babel
 				exclude: /node_modules/, // exclusion
 				use: {
 					loader: 'babel-loader',
 					options: {
-						presets: ['@babel/preset-react', '@babel/preset-env'],
+						presets: ['@babel/preset-react', '@babel/preset-env', '@babel/preset-typescript'],
 						plugins: ['@babel/plugin-transform-runtime'] // enable different features as async/await syntaxes, etc
 					}
 				}
@@ -54,5 +54,6 @@ module.exports = {
 	// Remove this when above will be placed in a dedicated repositories
 	resolve: {
 		modules: [path.resolve(CWD, 'node_modules'), 'node_modules'],
+		extensions: ['.ts', '.tsx', '.js', '.jsx'],
 	}
 };
