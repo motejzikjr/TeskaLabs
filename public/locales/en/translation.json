@@ -86,5 +86,17 @@
 
 	"Training": {
 		"Hello, there is nothing here yet!": "Hello, there is nothing here yet!"
+	},
+
+	"Users": {
+		"Users": "Users",
+		"Username": "Username",
+		"E-mail": "E-mail",
+		"Address": "Address",
+		"Created at": "Created at",
+		"Last sign in": "Last sign in",
+		"IP address": "IP address",
+		"Phone number": "Phone number",
+		"Id": "Id"
 	}
 }

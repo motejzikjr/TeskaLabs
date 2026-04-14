@@ -86,5 +86,17 @@
 
 	"Training": {
 		"Hello, there is nothing here yet!": "Zdravíčko, zatím tu nic není!"
-	}
+	},
+
+    "Users": {
+        "Users": "Uživatelé",
+        "Username": "Přihlašovací jméno",
+        "E-mail": "E-mail",
+        "Address": "Adresa",
+        "Created at": "Vytvořen",
+        "Last sign in": "Poslední přihlášení",
+        "IP address": "IP adresa",
+        "Phone number": "Telefon",
+        "Id": "Id"
+    }
 }
