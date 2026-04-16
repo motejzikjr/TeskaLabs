@@ -2,6 +2,7 @@ import React from 'react';
 import { Container } from 'reactstrap';
 import { CurrentWeather } from "./weather/components/CurrentWeather";
 import { DailyForecast } from "./weather/components/DailyForecast";
+import { Charts } from "./weather/components/Charts";
 import { useWeather } from "./weather/hooks/useWeather";
 
 export function WeatherScreen() {
@@ -14,6 +15,7 @@ export function WeatherScreen() {
 		<Container>
             <CurrentWeather current={weather.current} onRefresh={refresh} />
             <DailyForecast forecast={weather.forecast} />
+            <Charts forecast={weather.forecast} />
 		</Container>
 	);
 }
