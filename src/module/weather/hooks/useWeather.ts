@@ -5,6 +5,7 @@ import { toDailyForecast } from "../mappers/toDailyForecast";
 import { WeatherResponse } from "../types/WeatherResponse";
 import { CurrentWeather } from "../types/CurrentWeather";
 import { DailyForecast } from "../types/DailyForecast";
+import { useWeatherStore } from "../stores/weatherStore";
 
 interface WeatherData {
     current: CurrentWeather;
@@ -15,6 +16,7 @@ export const useWeather = () => {
     const [weather, setWeather] = useState<WeatherData | null>(null)
     const [isLoading, setIsLoading] = useState(true)
     const [error, setError] = useState<Error | null>(null)
+    const { updateCurrentTemperature } = useWeatherStore()
 
     const getWeather = async () => {
         setIsLoading(true)
@@ -29,10 +31,15 @@ export const useWeather = () => {
                 forecast_days: 7,
             });
 
+            const current = toCurrentWeather(data);
+            const forecast = toDailyForecast(data);
+
             setWeather({
-                current: toCurrentWeather(data),
-                forecast: toDailyForecast(data),
+                current,
+                forecast,
             })
+
+            updateCurrentTemperature(current?.temperature ?? 0);
         } catch (error) {
             if (error instanceof Error) {
                 setError(error)

@@ -3,6 +3,7 @@ import { Module } from "asab_webui_components";
 import { TableScreen } from './TableScreen.jsx';
 import { DetailScreen } from './DetailScreen.jsx';
 import { WeatherScreen } from "./WeatherScreen";
+import { HeaderTemperature } from "./weather/components/HeaderTemperature";
 
 export default class TableApplicationModule extends Module {
 	constructor(app, name) {
@@ -39,6 +40,12 @@ export default class TableApplicationModule extends Module {
 			name: "Weather",
 			icon: 'bi bi-table',
 			url: "/weather",
+		});
+
+		const headerService = app.locateService("HeaderService");
+		headerService.addComponent({
+			component: HeaderTemperature,
+			order: 100,
 		});
 	}
 }
