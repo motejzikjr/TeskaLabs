@@ -1,68 +1,43 @@
-# TeskaLabs Training UI App
-
-This is a training task for developers who like challenges :)
-
-## Prerequisities
-
-### API endpoints
-
-`https://devtest.teskalabs.com/data`
-
-`https://devtest.teskalabs.com/detail/<id>`
-
-### TeskaLabs WebUI libraries
-
-[ASAB WebUI Shell Library](https://github.com/TeskaLabs/asab-webui-shell-lib)
-
-[ASAB WebUI Components Library](https://github.com/TeskaLabs/asab-webui-components-lib)
-
-### pnpm
-
-Useful commands:
-
-```
-pnpm install
-pnpm start
-pnpm build
-```
-
-## The task
-
-This task has 3 parts to be extended/implemented - Table, Detail and your custom screens. The requirement is to extend the Table screen, create a Detail screen for Table screen and build your own custom screen. A plus points are for building & deploying the application that we can examine its functionality.
+# TeskaLabs Training UI App - Results
 
 ### Table screen
 
-- Extend a Table screen.
-- Use this API for obtaining the data: `https://devtest.teskalabs.com/data`
-- Create a screen with a table using components from [ASAB WebUI Components Library](https://github.com/TeskaLabs/asab-webui-components-lib). Hint: use `DataTable2` (explore the code, it will help you to understand the usage).
-- The table have to display all the `/data` content with one exception - `id` should be displayed on hover over `username`.
-- The table by default use params, therefore there should be a pagination (you need to ensure a proper request to the `/data` endpoint, `DataTable2` has pagination by default).
-- For timestamp values use apropriate components from [ASAB WebUI Components Library](https://github.com/TeskaLabs/asab-webui-components-lib)
-- Add navigation to Detail screen by the `id`.
+- [x] Extend a Table screen.
+- [x] Use this API for obtaining the data: `https://devtest.teskalabs.com/data`
+- [x] Create a screen with a table using components from [ASAB WebUI Components Library](https://github.com/TeskaLabs/asab-webui-components-lib). Hint: use `DataTable2` (explore the code, it will help you to understand the usage).
+- [x] The table have to display all the `/data` content with one exception - `id` should be displayed on hover over `username`.
+- [x] The table by default use params, therefore there should be a pagination (you need to ensure a proper request to the `/data` endpoint, `DataTable2` has pagination by default).
+- [x] For timestamp values use apropriate components from [ASAB WebUI Components Library](https://github.com/TeskaLabs/asab-webui-components-lib)
+- [x] Add navigation to Detail screen by the `id`.
 
 ### Detail screen
 
-- Create a Detail screen.
-- Use this API for obtaining the detail data: `https://devtest.teskalabs.com/detail/<id>`
-- Create a screen with a card(s) which display all the information retrieved from the `/detail/<id>` endpoint.
-- You can render the data in 1 or several cards based on your choice.
-- You can use components from [ASAB WebUI Components Library](https://github.com/TeskaLabs/asab-webui-components-lib).
-
-### Your own screen
-
-- Create your own screen.
-- The screen should use any free API data source (or you can connect it to your backend, if you dare to).
-- Use components of your choice and design the screen as you wish (you can install any library/framework which you are used to use).
+- [x] Create a Detail screen.
+- [x] Use this API for obtaining the detail data: `https://devtest.teskalabs.com/detail/<id>`
+- [x] Create a screen with a card(s) which display all the information retrieved from the `/detail/<id>` endpoint.
+- [x] You can render the data in 1 or several cards based on your choice.
+- [x] You can use components from [ASAB WebUI Components Library](https://github.com/TeskaLabs/asab-webui-components-lib).
 
 ### Plus points
 
-- Add translations to the Table header and Detail card.
-- Use bootstrap icons for Table header and Detail card.
-- Implement navigation back from Detail screen to Table screen.
-- Build & deploy the application (provide the functional link).
+- [x] Add translations to the Table header and Detail card.
+- [x] Use bootstrap icons for Table header and Detail card.
+- [x] Implement navigation back from Detail screen to Table screen.
+- [x] Build & deploy the application (provide the functional link).
 
-## The expected output
+### Your own screen (Weather)
 
-- Attach the link of your public github/gitlab where the TeskaLabs Training UI App is being cloned and extended. We will go through the code.
+- [x] Use TypeScript — the entire module is written in `.ts`/`.tsx` as opposed to other modules in `.js`/`.jsx`.
+- [x] Define data types — custom types `CurrentWeather`, `DailyForecast`, `WeatherResponse` in separate files.
+- [x] Use mappers — transform API response into domain types (`toCurrentWeather`, `toDailyForecast`).
+- [x] Use Zustand store — shared global state `currentTemperature` and `lastUpdated` across the application.
+- [x] Integrate with HeaderService — display current temperature and last updated time in the application header via `headerService.addComponent()`.
+- [x] Use Material UI — `Card`, `Typography`, `Box` components from `@mui/material` instead of Reactstrap.
+- [x] Use Recharts — display min/max temperature chart using `LineChart` from the recharts library.
+- [x] Use date-fns — date formatting with Czech locale (`cs` locale).
+- [x] Use API wrapper — typed Axios-based client (`openMeteoClient`) for communicating with the Open-Meteo API.
 
-- Did you complete this task? Send the result (links) to [frantisek.pesek@teskalabs.com](mailto:frantisek.pesek@teskalabs.com)
+### Code generated by AI Claude Code
+
+- [x] Use Open-Meteo API client wrapper — typed HTTP client abstracting the Open-Meteo forecast API calls.
+- [x] Use GitHub Actions deploy — automated build and deployment pipeline via GitHub Actions.
